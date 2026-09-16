@@ -17,11 +17,19 @@ jobs:
       - name: List installed Xcode versions
         run: ls -d /Applications/Xcode*.app
 
-      - name: Select latest available Xcode
+      - name: Select an Xcode with a working iOS Simulator destination
         run: |
-          latest=$(ls -d /Applications/Xcode_*.app 2>/dev/null | sort -V | tail -1)
-          echo "Switching to $latest"
-          sudo xcode-select -switch "$latest"
+          for app in $(ls -d /Applications/Xcode_*.app | sort -Vr); do
+            sudo xcode-select -switch "$app"
+            echo "Trying $app ..."
+            if xcodebuild -showdestinations -project AnimeVerse.xcodeproj -scheme AnimeVerse 2>/dev/null \
+                | grep -E "platform:iOS Simulator" | grep -q "id:[0-9A-Fa-f-]\{36\}"; then
+              echo "✅ Using $app (has a working iOS Simulator destination)"
+              break
+            else
+              echo "⚠️  $app has no usable iOS Simulator destination, trying next..."
+            fi
+          done
 
       - name: Show selected Xcode version
         run: xcodebuild -version
