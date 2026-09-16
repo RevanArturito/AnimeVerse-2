@@ -14,10 +14,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Select Xcode
-        run: sudo xcode-select -switch /Applications/Xcode_16.2.app
+      - name: List installed Xcode versions
+        run: ls /Applications | grep Xcode
 
-      - name: Show Xcode version
+      - name: Show default Xcode version
         run: xcodebuild -version
 
       - name: List available simulators
