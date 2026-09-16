@@ -1,0 +1,57 @@
+{
+  "configurations" : [
+    {
+      "id" : "9CE0338C-FFFB-495E-A161-042B0649FA98",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:AnimeVerse.xcodeproj",
+      "identifier" : "B6B3B3653057B88500B78383",
+      "name" : "AnimeVerse"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/Common",
+        "identifier" : "CommonTests",
+        "name" : "CommonTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/DetailFeature",
+        "identifier" : "DetailFeatureTests",
+        "name" : "DetailFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/Core",
+        "identifier" : "CoreTests",
+        "name" : "CoreTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/HomeFeature",
+        "identifier" : "HomeFeatureTests",
+        "name" : "HomeFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/FavoriteFeature",
+        "identifier" : "FavoriteFeatureTests",
+        "name" : "FavoriteFeatureTests"
+      }
+    }
+  ],
+  "version" : 1
+}
