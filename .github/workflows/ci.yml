@@ -31,4 +31,4 @@ jobs:
           xcodebuild test \
             -project AnimeVerse.xcodeproj \
             -scheme AnimeVerse \
-            -destination 'generic/platform=iOS Simulator'
+            -destination 'platform=iOS Simulator,name=iPhone 16'
