@@ -15,9 +15,15 @@ jobs:
         uses: actions/checkout@v4
 
       - name: List installed Xcode versions
-        run: ls /Applications | grep Xcode
+        run: ls -d /Applications/Xcode*.app
 
-      - name: Show default Xcode version
+      - name: Select latest available Xcode
+        run: |
+          latest=$(ls -d /Applications/Xcode_*.app 2>/dev/null | sort -V | tail -1)
+          echo "Switching to $latest"
+          sudo xcode-select -switch "$latest"
+
+      - name: Show selected Xcode version
         run: xcodebuild -version
 
       - name: List available simulators
