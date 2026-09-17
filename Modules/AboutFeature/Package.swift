@@ -8,9 +8,11 @@ let package = Package(
         .library(name: "AboutFeature", targets: ["AboutFeature"])
     ],
     dependencies: [
-        .package(path: "../Common")
+        .package(url: "https://github.com/RevanArturito/AnimeVerse-Common.git", from: "1.0.3")
     ],
     targets: [
-        .target(name: "AboutFeature", dependencies: ["Common"])
+        .target(name: "AboutFeature", dependencies: [
+            .product(name: "Common", package: "AnimeVerse-Common")
+        ])
     ]
 )

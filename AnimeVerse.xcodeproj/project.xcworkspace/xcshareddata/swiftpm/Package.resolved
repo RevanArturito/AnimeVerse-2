@@ -10,6 +10,24 @@
       }
     },
     {
+      "identity" : "animeverse-common",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RevanArturito/AnimeVerse-Common.git",
+      "state" : {
+        "revision" : "18a75e1c863a8cc73f7f802ebaeff538f9ab2b93",
+        "version" : "1.0.3"
+      }
+    },
+    {
+      "identity" : "animeverse-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RevanArturito/AnimeVerse-Core.git",
+      "state" : {
+        "revision" : "7b37d226116aed98fdddaee9944cb5448ad8b43c",
+        "version" : "1.0.1"
+      }
+    },
+    {
       "identity" : "kingfisher",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher.git",

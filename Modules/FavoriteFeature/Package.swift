@@ -8,12 +8,16 @@ let package = Package(
         .library(name: "FavoriteFeature", targets: ["FavoriteFeature"])
     ],
     dependencies: [
-        .package(path: "../Core"),
-        .package(path: "../Common"),
+        .package(url: "https://github.com/RevanArturito/AnimeVerse-Core.git", from: "1.0.1"),
+        .package(url: "https://github.com/RevanArturito/AnimeVerse-Common.git", from: "1.0.3"),
         .package(path: "../DetailFeature")
     ],
     targets: [
-        .target(name: "FavoriteFeature", dependencies: ["Core", "Common", "DetailFeature"]),
+        .target(name: "FavoriteFeature", dependencies: [
+            .product(name: "Core", package: "AnimeVerse-Core"),
+            .product(name: "Common", package: "AnimeVerse-Common"),
+            "DetailFeature" 
+        ]),
         .testTarget(name: "FavoriteFeatureTests", dependencies: ["FavoriteFeature"])
     ]
 )

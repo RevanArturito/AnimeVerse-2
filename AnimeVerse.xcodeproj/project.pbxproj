@@ -13,7 +13,6 @@
 		B60FFAAF3059AA7D0083BE9A /* HomeFeature in Frameworks */ = {isa = PBXBuildFile; productRef = B60FFAAE3059AA7D0083BE9A /* HomeFeature */; };
 		B60FFAB23059AA920083BE9A /* AboutFeature in Frameworks */ = {isa = PBXBuildFile; productRef = B60FFAB13059AA920083BE9A /* AboutFeature */; };
 		B60FFAB53059AAA90083BE9A /* FavoriteFeature in Frameworks */ = {isa = PBXBuildFile; productRef = B60FFAB43059AAA90083BE9A /* FavoriteFeature */; };
-		B63A30523059958600DE3C74 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = B63A30513059958600DE3C74 /* Core */; };
 		B6611FA2305A68FE00EB18A9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B6611FA1305A68FE00EB18A9 /* RxCocoa */; };
 		B6611FA4305A68FE00EB18A9 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B6611FA3305A68FE00EB18A9 /* RxRelay */; };
 		B6611FA6305A68FE00EB18A9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B6611FA5305A68FE00EB18A9 /* RxSwift */; };
@@ -76,7 +75,6 @@
 				B6611FA9305A690B00EB18A9 /* Swinject in Frameworks */,
 				B6611FB2305A693500EB18A9 /* AboutFeature in Frameworks */,
 				B60FFAB53059AAA90083BE9A /* FavoriteFeature in Frameworks */,
-				B63A30523059958600DE3C74 /* Core in Frameworks */,
 				B603ECE3305999CC00FA6F45 /* FavoriteFeature in Frameworks */,
 				B6611FB5305A694200EB18A9 /* FavoriteFeature in Frameworks */,
 				B6611FAC305A691700EB18A9 /* Alamofire in Frameworks */,
@@ -130,7 +128,6 @@
 			);
 			name = AnimeVerse;
 			packageProductDependencies = (
-				B63A30513059958600DE3C74 /* Core */,
 				B603ECDF305999AE00FA6F45 /* HomeFeature */,
 				B603ECE2305999CC00FA6F45 /* FavoriteFeature */,
 				B603ECE5305999E300FA6F45 /* AboutFeature */,
@@ -496,10 +493,6 @@
 		B60FFAB43059AAA90083BE9A /* FavoriteFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FavoriteFeature;
-		};
-		B63A30513059958600DE3C74 /* Core */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Core;
 		};
 		B6611FA1305A68FE00EB18A9 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
